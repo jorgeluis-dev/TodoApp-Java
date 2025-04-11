@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  game-server:
+    build: .
+    ports:
+      - "3000:3000"   # Cliente (se usar servidor web)
+      - "2567:2567"    # Servidor Colyseus
+    volumes:
+      - ./:/app        # Sincroniza código local com o container (para desenvolvimento)
